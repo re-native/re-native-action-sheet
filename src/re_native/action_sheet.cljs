@@ -15,3 +15,12 @@
 (assert connectActionSheet)
 (assert ActionSheetProvider)
 (assert ActionSheet)
+
+(defn show-action-sheet-with-options [action-sheet options cb]
+  (showActionSheetWithOptions action-sheet
+                              (clj->js options)
+                              (fn show-action-sheet-with-options-cb [i]
+                                (cb i))))
+
+(def action-sheet-provider (r/adapt-react-class ActionSheetProvider))
+(def action-sheet (r/adapt-react-class ActionSheet))
