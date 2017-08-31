@@ -2,7 +2,7 @@
   (:require [reagent.core :as r]
             [re-frame.core :as re]))
 
-(def react-native-action-sheet (js/require "@exponent/react-native-action-sheet"))
+(def react-native-action-sheet (js/require "@expo/react-native-action-sheet"))
 (def connectActionSheet (aget react-native-action-sheet "connectActionSheet"))
 (def ActionSheetProvider (aget react-native-action-sheet "ActionSheetProvider"))
 
